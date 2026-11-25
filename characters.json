@@ -1,0 +1,357 @@
+{
+  "characters": [
+    {
+      "anim_clips": [
+        {
+          "clip": "CommandGrab",
+          "file": "Deckard_CommandGrab.ma",
+          "modified": "2025-05-24",
+          "size_bytes": 10904193,
+          "key_range": [
+            0,
+            155
+          ],
+          "keys": 39652,
+          "maya": "2022",
+          "playback": [
+            1,
+            160
+          ],
+          "curves": 1486,
+          "animated_nodes": 174,
+          "drive_id": "1nr_-cc8Xq08hp9KdHlElC275GIhDaCMo",
+          "drive_link": "https://drive.google.com/file/d/1nr_-cc8Xq08hp9KdHlElC275GIhDaCMo/view?usp=drive_link"
+        },
+        {
+          "clip": "Dashing",
+          "file": "Deckard_Dashing.ma",
+          "modified": "2025-05-24",
+          "size_bytes": 10422883,
+          "key_range": [
+            0,
+            60
+          ],
+          "keys": 19103,
+          "maya": "2022",
+          "playback": [
+            1,
+            64
+          ],
+          "curves": 1460,
+          "animated_nodes": 171,
+          "drive_id": "1G9C4us7pTB3CZq4_y2CW6Ld_KfqW7tAI",
+          "drive_link": "https://drive.google.com/file/d/1G9C4us7pTB3CZq4_y2CW6Ld_KfqW7tAI/view?usp=drive_link"
+        },
+        {
+          "clip": "HeavyKick",
+          "file": "Deckard_HeavyKick.ma",
+          "modified": "2025-05-24",
+          "size_bytes": 11225255,
+          "key_range": [
+            0,
+            74
+          ],
+          "keys": 20684,
+          "maya": "2022",
+          "playback": [
+            1,
+            96
+          ],
+          "curves": 1494,
+          "animated_nodes": 177,
+          "drive_id": "1mIn_XQWfZSUJakRcVugtHtoKrGX2ZAQm",
+          "drive_link": "https://drive.google.com/file/d/1mIn_XQWfZSUJakRcVugtHtoKrGX2ZAQm/view?usp=drive_link"
+        },
+        {
+          "clip": "HitReactions",
+          "file": "Deckard_HitReactions.ma",
+          "modified": "2025-05-24",
+          "size_bytes": 10177263,
+          "key_range": [
+            0,
+            125
+          ],
+          "keys": 6953,
+          "maya": "2022",
+          "playback": [
+            1,
+            68
+          ],
+          "curves": 1478,
+          "animated_nodes": 175,
+          "note": "controls mostly end at 68; only arm_R0 ik controls run to 115-125, mesh visibility key at 200 — export range needs a decision",
+          "drive_id": "1tIl9cmq4cR8-p821TEjyl62JrEnspsf2",
+          "drive_link": "https://drive.google.com/file/d/1tIl9cmq4cR8-p821TEjyl62JrEnspsf2/view?usp=drive_link"
+        },
+        {
+          "clip": "Super",
+          "file": "Deckard_Super.ma",
+          "modified": "2025-06-03",
+          "size_bytes": 10722460,
+          "key_range": [
+            0,
+            268
+          ],
+          "keys": 36322,
+          "maya": "2023",
+          "playback": [
+            1,
+            400
+          ],
+          "curves": 1470,
+          "animated_nodes": 172,
+          "drive_id": "1C3CQLtzUxRwUN04Quc51PC80EeQw9LqD",
+          "drive_link": "https://drive.google.com/file/d/1C3CQLtzUxRwUN04Quc51PC80EeQw9LqD/view?usp=drive_link"
+        }
+      ],
+      "anim_clips_missing": [
+        "idle / walk / jab / basic moves — only 5 special moves found, no basics yet",
+        "HitReactions export range undecided: bulk ends 68, arm tail to 125, visibility key at 200"
+      ],
+      "anim_dir": "Deckard/anim",
+      "code": "DETECTIVE",
+      "description": "Focus character for v1. Rig, model and 5 special-move anims verified in Drive.",
+      "display_name": "Deckard",
+      "drive_folder_id": "1wlrSNB7viOel9yRflGRRyE2tsUoEyqFY",
+      "export_dir": "unity_export/Detective",
+      "internal_name": "Deckard",
+      "model_dir": "Deckard/mesh",
+      "model_files": [
+        {
+          "file": "MOD_Detective.fbx",
+          "location": "mesh",
+          "modified": "2025-05-08",
+          "size_bytes": 4448048,
+          "status": "newest model file — check it matches rig v08 skeleton"
+        },
+        {
+          "file": "MOD_Detective.obj",
+          "location": "mesh",
+          "modified": "2024-07-11",
+          "size_bytes": 1436270,
+          "status": "older, with MOD_Detective.mtl"
+        }
+      ],
+      "model_ma_status": "MISSING — no versioned .ma model file found, only .obj + .fbx",
+      "namespace": "Detective",
+      "notes": "Drive folder renamed Detective -> Deckard, Nov 24, 2026. Namespace stays 'Detective' (matches Detective_Rig_v08.ma). Anims are Deckard_*, textures TEX_DDR_*, rig/model Detective_*.",
+      "portrait": "Deckard/thumbnail/Deckard_thumbnail.png",
+      "portrait_status": "Square 150x150, Nov 24, 2026 — Deckard_thumbnail.png from Drive thumbnail/ folder",
+      "rig_dir": "assets/characters/Detective/rig",
+      "rig_path": "Deckard/rig/Detective_Rig_v08.ma",
+      "rig_versions": [
+        {
+          "file": "Detective_Rig_v08.ma",
+          "modified": "2024-08-17",
+          "size_bytes": 9920308,
+          "status": "latest"
+        },
+        {
+          "file": "Detective_Rig_v06.ma",
+          "modified": "2024-07-23",
+          "size_bytes": 9484729,
+          "status": "previous"
+        },
+        {
+          "file": "Detective_Rig_v03.ma",
+          "modified": null,
+          "size_bytes": null,
+          "status": "archive"
+        }
+      ],
+      "rig_versions_missing": [
+        "v04",
+        "v05",
+        "v07"
+      ],
+      "texture_dir": "Deckard/texture",
+      "texture_prefix": "DDR",
+      "textures": [
+        {
+          "file": "TEX_DDR_Body_BaseColor.png",
+          "modified": "2025-05-08",
+          "size_bytes": 2599988
+        },
+        {
+          "file": "TEX_DDR_Clothes_BaseColor.png",
+          "modified": "2026-02-20",
+          "size_bytes": 2504772
+        },
+        {
+          "file": "TEX_DDR_Accessories_BaseColor.png",
+          "modified": "2025-05-20",
+          "size_bytes": 2068411
+        }
+      ],
+      "textures_missing": [
+        "Normal",
+        "Roughness",
+        "Metallic",
+        "etc. — only BaseColor x3 found"
+      ],
+      "portrait_drive_link": "https://drive.google.com/file/d/1QPaV2mNsHk2XlIWPKBsXRwthNMjxXq-s/view?usp=drivesdk",
+      "portrait_size": "150x150",
+      "preview": "Deckard/Deckard_viewport.jpg",
+      "preview_drive_link": "https://drive.google.com/file/d/1mMCTgpjI1t_ppvLBzvmbPhikwdBQHXkI/view?usp=drive_link",
+      "preview_status": "Full-body Maya viewport shot (667x684 JPEG) — the detail preview, different from the square thumbnail, so the bar icon and the detail pane no longer show the same image twice."
+    },
+    {
+      "anim_dir": "Delilah/anim",
+      "code": "CREEPYLADY",
+      "description": "",
+      "display_name": "Delilah",
+      "drive_folder_id": "1yFt69L5FFTp_viqiTRuvj8J9-NVGLfl3",
+      "export_dir": "unity_export/CreepyLady",
+      "model_dir": "Delilah/mesh",
+      "namespace": "CreepyLady",
+      "notes": "Drive folder renamed CreepyLady -> Delilah, Nov 24, 2026. Real name Delilah matches the rig (Delilah_Rig_v016.ma) and model (MOD_Delilah.fbx). No thumbnail yet — placeholder '?' shows.",
+      "portrait": "Delilah/thumbnail/Delilah_thumbnail.png",
+      "rig_dir": "assets/characters/CreepyLady/rig",
+      "rig_path": "Delilah/rig/Delilah_Rig_v016.ma",
+      "texture_dir": "Delilah/texture",
+      "portrait_status": "Missing — no thumbnail folder in Drive yet; placeholder '?' shows",
+      "rig_versions": [
+        {
+          "file": "Delilah_Rig_v016.ma",
+          "size_bytes": 11215179,
+          "status": "latest"
+        }
+      ],
+      "model_files": [
+        {
+          "file": "MOD_Delilah.fbx",
+          "size_bytes": 592268,
+          "status": "model"
+        },
+        {
+          "file": "Delilah_Sean_update.fbx",
+          "size_bytes": 723344,
+          "status": "Sean's updated model"
+        }
+      ],
+      "anim_clips_missing": [
+        "no anims found yet — no anim/ folder in Drive yet"
+      ]
+    },
+    {
+      "anim_dir": "Jacques/anim",
+      "code": "CABLEMAN",
+      "description": "",
+      "display_name": "Jacques",
+      "drive_folder_id": "14Dg3WNM6rbxMGVJ_gOaxqhz9OjHa4QL7",
+      "export_dir": "unity_export/CableMan",
+      "model_dir": "Jacques/mesh",
+      "namespace": "CableMan",
+      "notes": "Drive folder renamed CableMan -> Jacques, Nov 24, 2026. Rig is Cable_Rig_v015.ma. No anims inventoried yet — no Source Files folder.",
+      "portrait": "Jacques/Thumbnail/Jacques_thumbnail.png",
+      "rig_dir": "assets/characters/CableMan/rig",
+      "rig_path": "Jacques/rig/Cable_Rig_v015.ma",
+      "texture_dir": "Jacques/texture",
+      "portrait_status": "Square 200x200, Nov 24, 2026 — Jacques_thumbnail.png from Drive Thumbnail/ folder",
+      "portrait_drive_link": "https://drive.google.com/file/d/1nTdvHTWbD_toYrD7vvUyWvKx26ocjLVt/view?usp=drivesdk",
+      "portrait_size": "200x200",
+      "rig_versions": [
+        {
+          "file": "Cable_Rig_v015.ma",
+          "size_bytes": 18092508,
+          "status": "latest"
+        }
+      ],
+      "model_files": [
+        {
+          "file": "Jacques_Rig_Edit.ma",
+          "size_bytes": 17228606,
+          "status": "a rig edit .ma, not a model — belongs in rig/ after the reorg; no MOD file found"
+        }
+      ],
+      "anim_clips_missing": [
+        "no anims found yet — no anim/ folder in Drive yet"
+      ]
+    },
+    {
+      "anim_dir": "Ryo/anim",
+      "code": "GAUNTLETGIRL",
+      "description": "",
+      "display_name": "Ryo",
+      "drive_folder_id": "1CAozDhn8jEumKBFYpuvPp3WbXhS8-p7X",
+      "export_dir": "unity_export/GauntletGirl",
+      "model_dir": "Ryo/mesh",
+      "namespace": "GauntletGirl",
+      "notes": "Drive folder renamed GauntletGirl -> Ryo, Nov 24, 2026. Rig files still named GauntletGirl_Rig_v*.ma. No anims inventoried yet — no Source Files folder.",
+      "portrait": "Ryo/thumbnail/Ryo_thumbnail.png",
+      "rig_dir": "assets/characters/GauntletGirl/rig",
+      "rig_path": "Ryo/rig/GauntletGirl_Rig_v013.ma",
+      "texture_dir": "Ryo/texture",
+      "portrait_status": "Square 200x200, Nov 24, 2026 — Ryo_thumbnail.png from Drive thumbnail/ folder",
+      "portrait_drive_link": "https://drive.google.com/file/d/1ZG6en_wxf9-TJ4AibRB3lLHoAH6N5Uqi/view?usp=drivesdk",
+      "portrait_size": "200x200",
+      "rig_versions": [
+        {
+          "file": "GauntletGirl_Rig_v013.ma",
+          "size_bytes": 23484963,
+          "status": "latest"
+        },
+        {
+          "file": "GauntletGirl_Rig_v012.ma",
+          "size_bytes": 23473874,
+          "status": "previous"
+        },
+        {
+          "file": "GauntletGirl_Rig_v011.ma",
+          "size_bytes": 23461045,
+          "status": "previous"
+        },
+        {
+          "file": "GauntletGirl_Rig_v008.ma",
+          "size_bytes": 10792284,
+          "status": "previous"
+        },
+        {
+          "file": "GauntletGirl_Rig_v006.ma",
+          "size_bytes": 12637531,
+          "status": "previous"
+        }
+      ],
+      "model_files": [
+        {
+          "file": "MOD_GauntletGirl_Final.fbx",
+          "size_bytes": 1134908,
+          "status": "newest model file"
+        },
+        {
+          "file": "MOD_Headphones.fbx",
+          "size_bytes": 58236,
+          "status": "headphones prop"
+        }
+      ],
+      "anim_clips_missing": [
+        "no anims found yet — no anim/ folder in Drive yet"
+      ]
+    }
+  ],
+  "drive_root": {
+    "folder_id": "1mCka_kB6u0_zXMNxOLFXevJtQQxBSdhA",
+    "name": "CollabFolder_Dayniel",
+    "webViewLink": "https://drive.google.com/drive/folders/1mCka_kB6u0_zXMNxOLFXevJtQQxBSdhA"
+  },
+  "focus_character": "DETECTIVE",
+  "naming": {
+    "anim": "Deckard_{CLIP}.ma  (Detective only — real files do not use v0001 versioning)",
+    "clip_thumb": "{CLIP}_thumb.png",
+    "fbx_anim": "Detective_{CLIP}.fbx",
+    "fbx_model": "Detective_model.fbx",
+    "model": "MOD_Detective.fbx / MOD_Detective.obj  (real files — no .ma model)",
+    "portrait": "portrait_{CODE}.png",
+    "rig": "Detective_Rig_v{VERSION:02d}.ma"
+  },
+  "notes": "Drive folders renamed to real character names Nov 24, 2026: Deckard, Jacques, Ryo, Delilah. Asset layout (Nov 24, 2026): project_root holds one folder per character, each with mesh/, texture/, rig/, skinweight/, anim/, thumbnail/. Drive folders still need renaming to match: Model/ -> mesh/, Rig/ -> rig/, Source Files/ -> split into mesh/ (MOD_*.fbx), texture/ (TEX_*.png), anim/ (Deckard_*.ma). Materials are NOT files: they live inside the mesh (.ma/.fbx) and point at the texture/ files. Point the GUI's top-right project-root field at that folder; it is saved per-machine in pmf_local.json, not in this file. Do NOT rename the Maya .ma rig files (Detective_Rig_v08.ma, Cable_Rig_v015.ma, GauntletGirl_Rig_v013.ma, Delilah_Rig_v016.ma): the anim files reference the old names when re-importing keys. Anim .ma source (Nov 25, 2026): the 5 Deckard clips live in the Drive folder linked as drive_anim_folder; each clip in characters.json now carries its drive_id/drive_link, and the Animation tab shows the local anim/ path when downloaded, else the relative path as a placeholder reference.",
+  "project": "PMF",
+  "project_name": "Project: Metal Fist",
+  "project_root": "X:/Projects/PMF",
+  "unity_export_root": "X:/Projects/PMF/unity_export",
+  "drive_anim_folder": {
+    "folder_id": "1_j9mI04FCn0QrWlnP6vcr1vXsafGQa5E",
+    "name": "Deckard anims (.ma)",
+    "webViewLink": "https://drive.google.com/drive/folders/1_j9mI04FCn0QrWlnP6vcr1vXsafGQa5E?usp=drive_link"
+  }
+}

@@ -1,0 +1,240 @@
+/* ==========================================================================
+   pmf_style.qss — dark stylesheet starter for the PMF tool (PySide6 / Qt)
+   ==========================================================================
+   A starting point for experimenting, NOT a finished theme and NOT
+   wired into main.py. Nothing in the tool changes until you apply it.
+
+   Palette: Prism / ShotGrid Loader inspired — dark greys, one blue
+   accent for selection and primary actions. Every rule targets a
+   widget type the PMF window actually uses (see pmf_window.py), so
+   you can see what each rule does by editing it and re-applying.
+
+   HOW TO TRY IT (in Maya's Script Editor, after pmf.show()):
+       qss = open(r"C:\Users\teoze\Documents\maya\scripts\pmf_character_pipeline\pmf_pipeline\ui\pmf_style.qss").read()
+       w.setStyleSheet(qss)        # just this window (w is the PMFWindow)
+       # — or app-wide, every Qt window in Maya:
+       # from PySide6 import QtWidgets
+       # QtWidgets.QApplication.instance().setStyleSheet(qss)
+
+   Re-apply after every edit: setStyleSheet() replaces the whole
+   sheet, so edit the file, re-run the two lines, and the window
+   updates live — no restart, no reload needed. That is the fast
+   loop for experimenting.
+
+   TO MAKE IT PERMANENT (your call, later): in main.py, at the end
+   of PMFWindow._load_ui(), add:
+       qss_path = os.path.join(os.path.dirname(__file__), "ui", "pmf_style.qss")
+       if os.path.exists(qss_path):
+           self.setStyleSheet(open(qss_path, encoding="utf-8").read())
+
+   QSS NOTES (the gotchas that bite first-timers):
+   - QSS is CSS-like, but NOT CSS: no inheritance the way web CSS
+     has it. A rule for QWidget sets the base; more specific rules
+     (QPushButton, #objectName) override it.
+   - "background" vs "background-color": use background-color for
+     widgets; plain "background" can reset other properties.
+   - Selectors:  QWidget {} = every widget.  QPushButton {} = all
+     buttons.  #titleLabel {} = the one widget with that objectName.
+     QPushButton:hover {} = a state.  QTabBar::tab:selected {} =
+     a sub-control in a state.
+   - If a rule does nothing, it is usually a typo in the selector
+     or a more specific rule winning. Comment out half the file to
+     find it.
+   ========================================================================== */
+
+/* --- base: every widget ----------------------------------------------- */
+QWidget {
+    background-color: #2b2b2b;
+    color: #d6d6d6;
+    selection-background-color: #2a5a8a;
+    selection-color: #ffffff;
+}
+
+/* --- buttons ---------------------------------------------------------- */
+QPushButton {
+    background-color: #404040;
+    border: 1px solid #555555;
+    border-radius: 3px;
+    padding: 4px 12px;
+}
+QPushButton:hover {
+    background-color: #4d4d4d;
+    border-color: #6a6a6a;
+}
+QPushButton:pressed {
+    background-color: #333333;
+}
+QPushButton:disabled {
+    color: #888888;
+    background-color: #363636;
+}
+
+/* --- text fields, combos, spin boxes ---------------------------------- */
+QLineEdit,
+QPlainTextEdit,
+QTextEdit,
+QComboBox,
+QSpinBox {
+    background-color: #232323;
+    border: 1px solid #555555;
+    border-radius: 3px;
+    padding: 3px 5px;
+    selection-background-color: #2a5a8a;
+}
+QLineEdit:focus,
+QPlainTextEdit:focus,
+QTextEdit:focus,
+QComboBox:focus,
+QSpinBox:focus {
+    border-color: #2a82da;
+}
+QComboBox::drop-down {
+    border: none;
+    width: 18px;
+}
+QComboBox::down-arrow {
+    image: none;            /* Qt draws the arrow when image is none */
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #aaaaaa;
+    width: 0px;
+    height: 0px;
+}
+
+/* --- tabs ------------------------------------------------------------- */
+QTabWidget::pane {
+    border: 1px solid #444444;
+    background-color: #2e2e2e;
+}
+QTabBar::tab {
+    background-color: #383838;
+    color: #bbbbbb;
+    border: 1px solid #444444;
+    border-bottom: none;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 6px 14px;
+    margin-right: 2px;
+}
+QTabBar::tab:selected {
+    background-color: #2e2e2e;
+    color: #ffffff;
+    border-top: 2px solid #2a82da;   /* <- the Prism-style accent line */
+}
+QTabBar::tab:hover {
+    color: #ffffff;
+}
+
+/* --- lists: character grid, animation library, versions, textures ----- */
+QListWidget {
+    background-color: #232323;
+    border: 1px solid #444444;
+    border-radius: 3px;
+    outline: none;
+}
+QListWidget::item {
+    padding: 4px;
+    border: 1px solid transparent;
+}
+QListWidget::item:hover {
+    background-color: #353535;
+}
+QListWidget::item:selected {
+    background-color: #2a5a8a;       /* <- ShotGrid's blue selected card */
+    color: #ffffff;
+    border: 1px solid #2a82da;
+}
+
+/* --- groups: File info, Version, Textures, Validation ----------------- */
+QGroupBox {
+    border: 1px solid #444444;
+    border-radius: 4px;
+    margin-top: 12px;
+    padding-top: 6px;
+    font-weight: bold;
+}
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    left: 8px;
+    padding: 0 4px;
+    color: #b0b0b0;
+}
+
+/* --- radio buttons and check boxes ------------------------------------ */
+QRadioButton::indicator,
+QCheckBox::indicator {
+    width: 13px;
+    height: 13px;
+    border: 1px solid #777777;
+    border-radius: 7px;
+    background-color: #232323;
+}
+QRadioButton::indicator:checked,
+QCheckBox::indicator:checked {
+    background-color: #2a82da;
+    border-color: #2a82da;
+}
+
+/* --- scroll bars (thin, dark — keeps lists looking like Prism) -------- */
+QScrollBar:vertical {
+    background-color: #232323;
+    width: 12px;
+    border: none;
+}
+QScrollBar::handle:vertical {
+    background-color: #4a4a4a;
+    border-radius: 6px;
+    min-height: 20px;
+}
+QScrollBar::handle:vertical:hover {
+    background-color: #5a5a5a;
+}
+QScrollBar:horizontal {
+    background-color: #232323;
+    height: 12px;
+    border: none;
+}
+QScrollBar::handle:horizontal {
+    background-color: #4a4a4a;
+    border-radius: 6px;
+    min-width: 20px;
+}
+
+/* --- tool tips --------------------------------------------------------- */
+QToolTip {
+    background-color: #1e1e1e;
+    color: #dddddd;
+    border: 1px solid #555555;
+    padding: 4px;
+}
+
+/* --- PMF-specific widgets, by objectName (from pmf_window.py) -------- */
+#logoLabel {
+    color: #7fb3e0;
+}
+#titleLabel {
+    color: #e8e8e8;
+}
+#statusLabel {
+    color: #9a9a9a;
+}
+#modelThumbLabel,
+#animThumbLabel {
+    border: 1px solid #555555;
+    background-color: #1e1e1e;
+    color: #888888;
+}
+
+/* --- things to try next (uncomment one at a time) ----------------------
+   A stronger accent for the ONE primary action per tab:
+   #validateButton { background-color: #2a5a8a; border-color: #2a82da; }
+   #importAnimButton { background-color: #2a5a8a; border-color: #2a82da; }
+
+   A red tint for a failed validation result:
+   #validationResultsText { color: #ff8888; }
+
+   A different accent colour entirely (ShotGrid's blue is close to
+   #1f7ac0; Prism's is close to #2a82da). Change the three #2a82da
+   values above and the two #2a5a8a values, re-apply, compare.
+   ---------------------------------------------------------------------- */

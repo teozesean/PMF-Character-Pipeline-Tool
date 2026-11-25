@@ -1,0 +1,24 @@
+# PMF Character Pipeline Tool — what never goes into the GitHub repo.
+# Code + docs + config live in git. Big assets live in Google Drive.
+
+# Maya / FBX / binary scene files — download from Drive, never commit.
+*.ma
+*.mb
+*.fbx
+
+# Local inspection copies of the .ma files (re-downloadable from Drive).
+source_archive/
+
+# Per-machine config: each machine's asset-folder path.
+pmf_local.json
+
+# Python caches and the test venv.
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv-test/
+
+# OS / editor noise.
+.DS_Store
+Thumbs.db
+*.zip
